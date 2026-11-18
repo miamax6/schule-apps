@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f3ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
+<title>Schule-Apps</title>
+<style>
+:root{
+  --serif:"Iowan Old Style","Charter","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Avenir Next","Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+  --bg:#f5f3ee; --surface:#fffdf9; --ink:#1d1f24; --ink2:#575c68; --ink3:#8a8f9a; --line:#e4e0d7;
+  --blue:#2d5fd3; --green:#1d8656; --red:#c4402e; --yellow:#c58f00; color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#121316; --surface:#1a1c20; --ink:#ecebe6; --ink2:#a9adb6; --ink3:#767b86; --line:#2b2f35;
+  --blue:#7ea4ff; --green:#52c48d; --red:#ff7d69; --yellow:#f0c24f; color-scheme:dark;}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.45}
+main{max-width:760px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 40px) 20px 48px}
+h1{font-family:var(--serif);font-weight:600;font-size:34px;margin:0 0 6px}
+.sub{color:var(--ink3);margin:0 0 28px}
+.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+a.app{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;position:relative;overflow:hidden}
+a.app::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--c,var(--blue))}
+a.app:hover{border-color:var(--ink3)}
+a.app h2{font-family:var(--serif);font-weight:600;font-size:21px;margin:0 0 4px}
+a.app p{margin:0;color:var(--ink2);font-size:14px}
+.dots{display:flex;gap:5px;margin-bottom:14px}
+.dots i{width:10px;height:10px;border-radius:3px;display:block}
+footer{margin-top:36px;color:var(--ink3);font-size:13px}
+</style>
+</head>
+<body>
+<main>
+  <div class="dots"><i style="background:var(--blue)"></i><i style="background:var(--green)"></i><i style="background:var(--red)"></i><i style="background:var(--yellow)"></i></div>
+  <h1>Schule-Apps</h1>
+  <p class="sub">Applications pour la classe.</p>
+  <div class="apps">
+    <a class="app" href="carnet-de-classe/" style="--c:var(--green)">
+      <h2>Carnet de classe</h2>
+      <p>Participation, oublis, parents prévenus, remarques, planning zone A.</p>
+    </a>
+  </div>
+  <footer>Les données restent dans le navigateur de chaque appareil. Rien n’est envoyé sur Internet.</footer>
+</main>
+</body>
+</html>

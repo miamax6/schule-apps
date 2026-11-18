@@ -1,0 +1,8 @@
+# Jamais de données d'élèves dans le dépôt
+*.json
+*.csv
+*.pdf
+*.xlsx
+*.docx
+sauvegardes/
+.DS_Store
